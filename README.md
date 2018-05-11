@@ -152,3 +152,26 @@ Items needed for install:
    + `reboot`
 
 28. You should now be greeted with the rEFInd boot loader, and see an option for your Arch Linux partition.
+
+***
+
+## Install Aura AUR Helper
+
+1. Create a directory for the aura PKGBUILD files and enter it.
+
+   `mkdir ~/aura-bin`
+   `cd ~/aura-bin`
+
+2. Download aura PKGBUILD from AUR.  
+
+   `wget --no-check-certificate https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD\?h\=aura-bin --output-document=./PKGBUILD`
+
+3. Run `makepkg` to build and install aura.
+
+   `makepkg -si`
+
+4. You can now install packages from the Arch User Repository using a similar command:
+
+   `sudo aura -Ax google-chrome`
+
+***
