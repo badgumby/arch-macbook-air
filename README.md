@@ -3,7 +3,7 @@ Install instructions for Macbook Air OSX and Arch side by side
 
 ## Getting Started
 Before starting you should have some knowledge of partitioning and Arch Linux.
-Also, I'd like to note that, more than likely, the wireless card in your Macbook Air will not be detected by the Arch boot disk (or most other distros). With that being said, you will need a USB to Ethernet adapter. I like [this one](https://www.amazon.com/AmazonBasics-1000-Gigabit-Ethernet-Adapter/dp/B00M77HMU0/ref=sr_1_3?ie=UTF8&qid=1526041709&sr=8-3&keywords=usb+ethernet).
+Also, I'd like to note that, more than likely, the wireless card in your Macbook Air will not be detected by the Arch boot disk (or most other distros). With that being said, you will need a USB-to-Ethernet adapter. I like [this one](https://www.amazon.com/AmazonBasics-1000-Gigabit-Ethernet-Adapter/dp/B00M77HMU0/ref=sr_1_3?ie=UTF8&qid=1526041709&sr=8-3&keywords=usb+ethernet).
 
 Items needed for install:
 
@@ -12,7 +12,7 @@ Items needed for install:
    + USB flash drive for the bootable .dmg (covered later)
 
 ## Install Instructions
-1. You will first need to resize your MacOS partition. You can do this using the Mac Disk Utility. If you are using APFS(Encrypted), you will be required to reinstall MacOS first, since it the encrypted file system will not allow a resize.
+1. You will first need to resize your MacOS partition. You can do this using the Mac Disk Utility. If you are using APFS(Encrypted), you will be required to reinstall MacOS first, since the encrypted file system will not allow a resize.
 2. Turn off System Integrity Protection (SIP).
 
    + Restart your MacOS
