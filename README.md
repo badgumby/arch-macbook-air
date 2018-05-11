@@ -12,8 +12,8 @@ Items needed for install:
    + USB flash drive for the bootable .dmg (covered later)
 
 ## Install Instructions
-1. You will first need to resize your MacOS partition. You can do this using the Mac Disk Utility. If you are using APFS(Encrypted), you will be required to reinstall MacOS first, since the encrypted file system will not allow a resize.
-2. Turn off System Integrity Protection (SIP).
+01. You will first need to resize your MacOS partition. You can do this using the Mac Disk Utility. If you are using APFS(Encrypted), you will be required to reinstall MacOS first, since the encrypted file system will not allow a resize.
+02. Turn off System Integrity Protection (SIP).
 
    + Restart your MacOS
    + Before it starts, press and hold `Command+R`
@@ -22,39 +22,39 @@ Items needed for install:
    + You should see a message similar to `Successfully disabled System Integrity Protection. Please restart the machine for the changes to take effect.`
    + Reboot your machine
 
-3. Download and install [rEFInd](https://sourceforge.net/projects/refind/).
+03. Download and install [rEFInd](https://sourceforge.net/projects/refind/).
 
    + Download the zip
    + Extract to a folder
    + In `Terminal` enter the directory that was extracted
    + Run the command `sudo ./refind-install`
 
-4. Download the current [Arch Linux iso](https://www.archlinux.org/download/).
-5. Convert `archlinux-20xx.xx.xx-x86_64.iso` to `.dmg` format.
+04. Download the current [Arch Linux iso](https://www.archlinux.org/download/).
+05. Convert `archlinux-20xx.xx.xx-x86_64.iso` to `.dmg` format.
 
    + `hdiutil convert -format UDRW -o archlinux-20xx.xx.xx-x86_64.iso arch-converted.dmg`
 
-6. Write the `arch-converted.dmg` to a USB flash drive.
+06. Write the `arch-converted.dmg` to a USB flash drive.
 
    + In a terminal, enter `diskutil list`
    + Identify your USB drive. In my case it was `/dev/disk2`
    + Once you have identified the disk, enter `diskutil unmountDisk /dev/disk2` (replace disk2 with your USB drive)
    + Once unmounted, enter `sudo dd if=arch-converted.dmg of=/dev/rdisk2 bs=1m` (use an `r` before disk to access the raw drive)
 
-7. Boot to USB drive.
+07. Boot to USB drive.
 
    + Power down your Macbook
    + Insert your USB-to-Ethernet Adapter
    + Power on, press and hold the `Alt/Option` key
    + On the UEFI selection menu, select your boot USB drive
 
-8. Verify network connectivity.
+08. Verify network connectivity.
 
    + Verify adapter appears and has connetivity. Enter `ip addr`
    + If DHCP has not started on the NIC enter `systemctl start dhcpcd@INTERFACE`, where `INTERFACE` is the NIC name.
    + Ping Google to verify internet connection. Enter `ping 8.8.8.8`
 
-9. List devices and format unused partition.
+09. List devices and format unused partition.
 
    + Enter `fdisk -l` to list the disks
    + Enter `sgdisk -n 0:0:0 -t 0:8300 -c 0:"data" /dev/sda3` (This assumes the partition you created is on device `sda` and is partition `3`)
