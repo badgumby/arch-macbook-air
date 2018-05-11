@@ -11,6 +11,8 @@ Items needed for install:
    + USB-to-Ethernet Adapter
    + USB flash drive for the bootable .dmg (covered later)
 
+***
+
 ## Install Instructions
 01. You will first need to resize your MacOS partition. You can do this using the Mac Disk Utility. If you are using APFS(Encrypted), you will be required to reinstall MacOS first, since the encrypted file system will not allow a resize.
 02. Turn off System Integrity Protection (SIP).
