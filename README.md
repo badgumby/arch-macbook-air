@@ -195,9 +195,8 @@ To set this permanently (starts on next boot), use the following command:
 If you receive a message similar to `A stop job is running for Session c2 of user xx`, you can decrease the timeout from 90 seconds (default) in the following config file:
 
    `/etc/systemd/system.conf`
-
-      + Uncomment and change time on line: `DefaultTimeoutStartSec=10s`
-      + Uncomment and change time on line: `DefaultTimeoutStopSec=10s`
+   Uncomment and change time on line: `DefaultTimeoutStartSec=10s`
+   Uncomment and change time on line: `DefaultTimeoutStopSec=10s`
 
 If you receive a bunch of messages similar to `Failed to remount '/oldroot/sys/fs/cgroup/pids'` or `Remounting '/oldroot/sys/fs/cgroup/pids'`, you can hide these by adding `shutdown` to `HOOKS` in the `/etc/mkinitcpio.conf` file. Then rebuild the `initrd` image.
 
