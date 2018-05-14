@@ -159,11 +159,11 @@ Items needed for install:
 
 ## Change F1-F12 Keys to Not Require FN Keypress
 
-To set this temporarily, use the following command:
+To set this temporarily (in your current session only), use the following command:
 
    `echo "2" | sudo tee /sys/module/hid_apple/parameters/fnmode`
 
-To set this permanently, use the following command:
+To set this permanently (starts on next boot), use the following command:
 
    `echo "options hid_apple fnmode=2" | sudo tee /etc/modprobe.d/hid_apple.conf`
 
