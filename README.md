@@ -171,7 +171,7 @@ To set this permanently (starts on next boot), use the following command:
 
 ## Install Yay AUR Helper and Pacman Wrapper (https://github.com/Jguer/yay)
 
-1. Create a directory for the aura PKGBUILD files and enter it.
+1. Create a directory for the yay PKGBUILD files and enter it.
 
    `mkdir ~/yay`
    `cd ~/yay`
