@@ -169,24 +169,24 @@ To set this permanently (starts on next boot), use the following command:
 
 ***
 
-## Install Aura AUR Helper
+## Install Yay AUR Helper and Pacman Wrapper (https://github.com/Jguer/yay)
 
 1. Create a directory for the aura PKGBUILD files and enter it.
 
-   `mkdir ~/aura-bin`
-   `cd ~/aura-bin`
+   `mkdir ~/yay`
+   `cd ~/yay`
 
-2. Download aura PKGBUILD from AUR.  
+2. Download yay PKGBUILD from AUR.  
 
-   `wget --no-check-certificate https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD\?h\=aura-bin --output-document=./PKGBUILD`
+   `wget --no-check-certificate https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=yay --output-document=./PKGBUILD`
 
-3. Run `makepkg` to build and install aura.
+3. Run `makepkg` to build and install yay.
 
    `makepkg -si`
 
 4. You can now install packages from the Arch User Repository using a similar command:
 
-   `sudo aura -Ax google-chrome`
+   `yay -S google-chrome`
 
 ***
 
